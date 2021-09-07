@@ -1,6 +1,6 @@
 
 def ok(c):
-    if (c >= 'a' and c <= 'z') :
+    if (c >= 'a' and c <= 'z') or (c >= '0' and c <= '9'):
         return False
     return True
 
@@ -36,6 +36,6 @@ def run():
     count = sorted(count.items(), key = lambda x: (-x[1], x[0]), reverse=True)
     count = reversed(count)
     for i in count:
-            print(i[0], i[1])
+        print(i[0], i[1])
 
 run()
