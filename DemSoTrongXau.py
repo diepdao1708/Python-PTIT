@@ -5,7 +5,6 @@ def run():
     dem = 0
     while i + len(n) <= len(s):
         tmp = s[i: i + len(n)]
-        # print(tmp)
         if(n == tmp):
             dem += 1
             i += len(n)
@@ -19,3 +18,15 @@ def main():
         run()
 
 main()
+
+# import re
+# def solve():
+#     s = input()
+#     tmp = input()
+#     ans = re.findall(tmp, s)
+#     print(len(ans))
+    
+# T = int(input())
+# while T:
+#     solve()
+#     T -= 1

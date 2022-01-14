@@ -1,31 +1,27 @@
-def N1(n):
-    s1 = str(n)
-    s2 = s1[::-1]
-    if s1 == s2:
+def thuan_nghich(n):
+    s1 = n[::-1]
+    if s1 == n:
         return True
     return False
 
-def N2(n):
-    n = str(n)
-    for i in range(0, len(n)):
-        x = int(n[i])
-        if x % 2 != 0:
+def chan(n):
+    for i in n:
+        if int(i) % 2 != 0:
             return False
     return True
 
-def N3(n):
-    n = int(len(str(n)))
-    if n % 2 == 0:
-        return True
-    return False
-
 def run():
     n = int(input())
-    res =""
-    for i in range(1, n):
-        if N1(i) and N2(i) and N3(i):
-            res += str(i) + " "
-    print(res)
+    i = 22
+    tmp = 100
+    while i < n:
+        if thuan_nghich(str(i)) and chan(str(i)):
+            print(i, end=" ")
+        if i == tmp:
+            i = tmp * 10
+            tmp *= 100
+        else: i += 2
+    print()
 
 def main():
     t = int(input())

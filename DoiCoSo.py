@@ -5,15 +5,12 @@ def run():
     sb = ""
     while (n > 0):
         m = n % b
-        if(b > 10):
-            if m >= 10:
-                sb += str(chr(55 + m))
-            else:
-                sb += str(m)
+        if m >= 10:
+            sb += str(chr(55 + m))
         else:
             sb += str(m)
         n = int(n / b)
-    print("".join(reversed(sb)))
+    print(sb[::-1])
 
 def main():
     t = int(input())
