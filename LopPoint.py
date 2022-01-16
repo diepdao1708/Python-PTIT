@@ -1,18 +1,17 @@
 import math
-
-def Decimal(x):
-    return float(x);
+from decimal import Decimal
 
 class Point:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-    def distance(self, p):
-        kc = math.sqrt(math.pow(self.x - p.x, 2) +
-                math.pow(self.y - p.y, 2))
-        kc = format(kc, '.4f')
-        return kc
-        
+
+    def distance(self, p2):
+        width = abs(self.x - p2.x)
+        height = abs(self.y - p2.y)
+        res = math.sqrt(width**2 + height**2)
+        return "{:.4f}".format(res)
+
 if __name__ == '__main__':
     t = int(input())
     while t > 0:
